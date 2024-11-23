@@ -1,0 +1,22 @@
+logging:
+  logging_level: $LOGGER_LEVEL|                          # "INFO"
+  logging_level_pdfminer: $LOGGER_LEVEL_PDFMINER|
+  logging_level_pymongo: $LOGGER_LEVEL_PYMONGO|
+
+db_types:
+  chatbot_history_db: $CHATBOT_HISTORY_DB|                        # Supported values: "redis". TODO: add "cosmos"
+  document_store_db: $DOCUMENT_STORE_DB|                          # Supported values: "redis". TODO: add "cosmos"
+  vector_store_db: $VECTOR_STORE_DB|                              # Supported values: "redis". TODO: add "search"
+  
+redis:
+  host: $REDIS_HOST|
+  port: $REDIS_PORT|
+  db: $REDIS_DB|
+  ttl: $REDIS_TTL|
+  index_name: $REDIS_INDEX_NAME|
+  parent_index_name: $REDIS_PARENT_INDEX_NAME|
+  chatbot_history_collection: $REDIS_CHAT_HISTORY_COLLECTION_NAME|
+  cache_ttl: $REDIS_CACHE_TTL|
+
+utils:
+  encryption_key: $ENCRYPTION_KEY|

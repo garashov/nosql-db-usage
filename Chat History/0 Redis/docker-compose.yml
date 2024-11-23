@@ -1,0 +1,18 @@
+name: nosql-db-Redis
+
+services:
+  redis:
+    image: redis/redis-stack:latest
+    ports:
+      - "6379:6379"
+      - "8001:8001"
+    volumes:
+      - ./data/redis:/data
+    environment:
+      - REDIS_ARGS=--save 60 10 --appendonly yes
+      - REDISEARCH_ARGS=TIMEOUT 10000  # Increase the timeout for redis search queries from 500ms to 10000ms (10s)
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
+      interval: 30s
+      timeout: 10s
+      retries: 20
