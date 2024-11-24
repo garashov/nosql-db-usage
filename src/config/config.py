@@ -35,13 +35,13 @@ REDIS_URL = f"redis://{REDIS_HOST}:{REDIS_PORT}"
 REDIS_DB = CONFIG["redis.db"]
 REDIS_INDEX_NAME = CONFIG["redis.index_name"]
 REDIS_PARENT_INDEX_NAME = CONFIG["redis.parent_index_name"]
-REDIS_COLLECTION = CONFIG["redis.chatbot_history_collection"]
+REDIS_COLLECTION_NAME = CONFIG["redis.chatbot_history_collection"]
 
 
 # ----------------------------------------------
 # DB Configuration
 # ----------------------------------------------
 CHATBOT_HISTORY_COLLECTION_NAME = (
-    REDIS_COLLECTION if CHATBOT_HISTORY_DB_TYPE == "redis"
+    REDIS_COLLECTION_NAME if CHATBOT_HISTORY_DB_TYPE == "redis"
     else None
 )
