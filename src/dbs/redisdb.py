@@ -1,6 +1,7 @@
 """
-This script is used to create Redis helpers for chat history storage.
+This script is used to create Redis helpers for db.
 """
+
 import json
 import redis
 from uuid import UUID

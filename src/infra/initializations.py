@@ -1,5 +1,5 @@
 from src.logging.logger import logger
-from src.infra.document_store import RedisChatHistoryHelper
+from src.dbs.redisdb import RedisChatHistoryHelper
 from src.config.config import (
     CHATBOT_HISTORY_DB_TYPE,
     REDIS_DB,

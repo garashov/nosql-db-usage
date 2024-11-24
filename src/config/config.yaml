@@ -4,9 +4,9 @@ logging:
   logging_level_pymongo: $LOGGER_LEVEL_PYMONGO|
 
 db_types:
-  chatbot_history_db: $CHATBOT_HISTORY_DB|                        # Supported values: "redis". TODO: add "cosmos"
-  document_store_db: $DOCUMENT_STORE_DB|                          # Supported values: "redis". TODO: add "cosmos"
-  vector_store_db: $VECTOR_STORE_DB|                              # Supported values: "redis". TODO: add "search"
+  chatbot_history_db: $CHATBOT_HISTORY_DB|
+  document_store_db: $DOCUMENT_STORE_DB|
+  vector_store_db: $VECTOR_STORE_DB|
   
 redis:
   host: $REDIS_HOST|
