@@ -14,5 +14,9 @@
     8000
   ],
   "postCreateCommand": "poetry install --no-root --without dev",
-  "remoteUser": "vscode"
+  "remoteUser": "vscode",
+  "mounts": [
+    "source=${localWorkspaceFolder}/../pyproject.toml,target=/workspace/pyproject.toml,type=bind",
+    "source=${localWorkspaceFolder}/../poetry.lock,target=/workspace/poetry.lock,type=bind"
+  ]
 }

@@ -10,10 +10,6 @@ RUN apt-get update && apt-get install -y \
 # Set the working directory
 WORKDIR /workspace
 
-# Copy pyproject.toml and poetry.lock from the parent folder
-COPY pyproject.toml /workspace/pyproject.toml
-COPY poetry.lock /workspace/poetry.lock
-
 # Install Poetry
 RUN pip install --upgrade pip && \
     pip install poetry
